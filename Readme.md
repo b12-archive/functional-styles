@@ -19,7 +19,7 @@
 
 This is not a library or something. It’s just an idea that will change the world.
 
-The idea is simple. Instead of one big fat CSS scope full of name conflicts and inheritance chains (yuck!) you compose your styles out of little functions.
+The idea is simple. Instead of one big fat CSS scope full of name conflicts and inheritance chains you compose your styles out of little functions.
 
 As well as being super modular, composable, testable and isolated functions have one more advantage. They can take options.
 
