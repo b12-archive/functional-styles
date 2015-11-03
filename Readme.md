@@ -41,17 +41,47 @@ You write this beautiful, concise JS:
 
 ```js
 //  • styles.js
-export myClass = ({color: blue}) => ({
+export myClass = ({color: blue}) => ({  // Defaults are totally optional!
   color,
 });
 
-//  • red-theme.js
-import myClass from 'styles';
+//  • red-thing.js
+const theme = {color: red};
 
-export default myClass({color: red});
+<h1 style={myClass(theme)}>
+  I’m very red!
+</h1>
 ```
 
-The return value of each function can be [git.io/orthodox](http://github.com/studio-b12/orthodox) – this way you can use the styles with React, Cycle.js, virtual-dom and everything else!
+Fair enough – that was nothing new to some of you. But here comes the exciting part:
+
+[snare drum rolling…]
+
+Thanks to [git.io/orthodox](http://github.com/studio-b12/orthodox) you can also render a CSS module with the same function!
+
+```js
+const restyle = require('restyle');
+
+restyle({
+  '.my-class': myClass(theme),
+});
+//» `.my-class {
+//    color: red;
+//  }`
+```
+
+In fact it’s even more flexible. Thanks to orthodox functional styles fit in seamlessly with Cycle.js, virtual-dom, free-style and every other hotness0!
+
+
+
+
+&nbsp;
+
+##                                                                 <a id="/note" >Note                                                                       </a>
+
+The idea is being tested out on a big production-ready style framework. It still needs some polishing – we’ll post concrete examples as soon as they are ready!
+
+Meanwhile, don’t hestitate to [weigh in](https://github.com/studio-b12/functional-styles/issues)!
 
 
 
