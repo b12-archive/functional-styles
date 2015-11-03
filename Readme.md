@@ -1,7 +1,7 @@
 <h1 align="center">
   <img
     alt="functional-styles"
-    width="404"
+    width="596"
     height="472"
     src="https://cdn.rawgit.com/studio-b12/functional-styles/0b7be24/logo.svg"
     id="/"
