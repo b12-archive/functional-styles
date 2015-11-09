@@ -70,7 +70,7 @@ restyle({
 //  }`
 ```
 
-In fact it’s even more flexible. Thanks to orthodox functional styles fit in seamlessly with Cycle.js, virtual-dom, free-style and every other hotness0!
+In fact it’s even more flexible. Thanks to orthodox functional styles fit in seamlessly with [*Cycle.js*](https://github.com/cyclejs/cycle-core), [*virtual-dom*](https://github.com/Matt-Esch/virtual-dom), [*Free style*](https://github.com/blakeembrey/free-style) and every other hotness!
 
 
 
