@@ -41,14 +41,14 @@ You write this beautiful, concise JS:
 
 ```js
 //  • styles.js
-export myClass = ({color: blue}) => ({  // Defaults are totally optional!
+export myClass = ({ color: 'blue' }) => ({  // Defaults are totally optional!
   color,
 });
 
 //  • red-thing.js
-const theme = {color: red};
+const theme = { color: 'red' };
 
-<h1 style={myClass(theme)}>
+<h1 style={ myClass(theme) }>
   I’m very red!
 </h1>
 ```
