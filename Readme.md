@@ -41,7 +41,7 @@ You write this beautiful, concise JS:
 
 ```js
 //  • styles.js
-export myClass = ({ color: 'blue' }) => ({  // Defaults are totally optional!
+export myClass = ({ color = 'blue' }) => ({  // Defaults are totally optional!
   color,
 });
 
