@@ -21,7 +21,7 @@ This is not a library or something. It’s just an idea that will change the wor
 
 The idea is simple. Instead of one big fat CSS scope full of name conflicts and inheritance chains you compose your styles out of little functions.
 
-As well as being super modular, composable, testable and isolated functions have one more advantage. They can take options.
+As well as being super modular, composable, testable and isolated, functions have one more obvious advantage. They can take options.
 
 So instead of this CSS:
 
@@ -70,7 +70,7 @@ restyle({
 //  }`
 ```
 
-In fact it’s even more flexible. Thanks to orthodox functional styles fit in seamlessly with [*Cycle.js*](https://github.com/cyclejs/cycle-core), [*virtual-dom*](https://github.com/Matt-Esch/virtual-dom), [*Free style*](https://github.com/blakeembrey/free-style) and every other hotness!
+In fact it’s even more flexible. Thanks to orthodox, functional styles fit in seamlessly with [Cycle.js](https://github.com/cyclejs/cycle-core), [virtual-dom](https://github.com/Matt-Esch/virtual-dom), [Free style](https://github.com/blakeembrey/free-style) and every other hotness!
 
 
 
