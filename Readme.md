@@ -13,81 +13,73 @@
 
 
 
-&nbsp;
+<a                                                         id="/tldr">&nbsp;</a>
 
-##                                                                 <a id="/tldr" >TL;DR                                                                      </a>
+## TL;DR
 
-This is not a library or something. It’s just an idea that will change the world.
+This is a library and CLI tool that will cure CSS development.
 
-The idea is simple. Instead of one big fat CSS scope full of name conflicts and inheritance chains you compose your styles out of little functions.
+The idea is simple. Instead of one big fat scope full of name conflicts and inheritance chains, you compose your styles out of little pure JS functions.
 
-As well as being super modular, composable, testable and isolated, functions have one more obvious advantage. They can take options.
+Functions are extremely modular, composable, testable and debug-friendly. And they can take options. All the things we’ve always wanted in CSS, LESS and SASS.
 
-So instead of this CSS:
 
-```css
-/*  • styles.css  */
-.my-class {
-  color: blue;
-}
 
-/*  • red-theme.css  */
-.red-theme .my-class {
-  color: red;
-}
+
+<a                                                 id="/installation"></a>&nbsp;
+
+## INSTALLATION
+
+```sh
+# Globally for a user:
+npm install --global functional-styles
+
+# …or locally for a project:
+npm install --save-dev functional-styles
 ```
 
-You write this beautiful, concise JS:
+Note that you need *node 4.0+* to run the tool natively. But if you’re stuck on an older version, don’t worry! [Rumour has it](https://github.com/tomekwi/elm-live/issues/2#issuecomment-156698732) that you can transpile the code to ES5!
 
-```js
-//  • styles.js
-export myClass = ({ color = 'blue' }) => ({  // Defaults are totally optional!
-  color,
-});
 
-//  • red-thing.js
-const theme = { color: 'red' };
 
-<h1 style={ myClass(theme) }>
-  I’m very red!
-</h1>
+
+<a                                                     id="/synopsis"></a>&nbsp;
+
+## SYNOPSIS
+
+```sh
+functional-styles [--config=<config>] <style function> | (CSS goes out)
+functional-styles --help
 ```
 
-Fair enough – that was nothing new to some of you. But here comes the exciting part:
 
-[snare drum rolling…]
 
-Thanks to [git.io/orthodox](http://github.com/studio-b12/orthodox) you can also render a CSS module with the same function!
 
-```js
-const restyle = require('restyle');
+<a                                                  id="/description"></a>&nbsp;
+## DESCRIPTION
 
-restyle({
-  '.my-class': myClass(theme),
-});
-//» `.my-class {
-//    color: red;
-//  }`
-```
+`<config>` should be a JS or JSON file exporting a config object. If you omit it, we’ll assume an empty object.
 
-In fact it’s even more flexible. Thanks to orthodox, functional styles fit in seamlessly with [Cycle.js](https://github.com/cyclejs/cycle-core), [virtual-dom](https://github.com/Matt-Esch/virtual-dom), [Free style](https://github.com/blakeembrey/free-style) and every other hotness!
+`<style function>` should be a JS file exporting a function.
+
+We’ll pass your config to the style function and translate the output object into a CSS stylesheet. Very simple, but very powerful.
 
 
 
 
-&nbsp;
+<a                                                         id="/note"></a>&nbsp;
 
-##                                                                 <a id="/note" >Note                                                                       </a>
+## NOTE
 
-The idea is being tested out on a big production-ready style framework. It still needs some polishing – we’ll post concrete examples as soon as they are ready!
+The idea is being tested out on a big production style framework. It still needs some polishing – we’ll post concrete examples as soon as they are ready!
 
 Meanwhile, don’t hestitate to [weigh in](https://github.com/studio-b12/functional-styles/issues)!
 
 
 
 
-&nbsp;
+<a                                                      id="/license"></a>&nbsp;
 
-##                                                              <a id="/license" >License                                                                    </a>
+## LICENSE
 
 [MIT](./License.md) © [Studio B12 GmbH](http://github.com/studio-b12)
